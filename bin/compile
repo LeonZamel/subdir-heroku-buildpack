@@ -23,7 +23,6 @@ if [ -f $ENV_DIR/PROJECT_PATH ]; then
 		cp -R $TMP_DIR/. $BUILD_DIR/
 		echo "       cleaning tmp dir $TMP_DIR"
 		rm -rf $TMP_DIR
-		exit 0
 	fi
 fi
 
@@ -47,12 +46,11 @@ if [ -f $ENV_DIR/PROJECT_PATH2 ]; then
 		cp -R $TMP_DIR/. $BUILD_DIR/
 		echo "       cleaning tmp dir $TMP_DIR"
 		rm -rf $TMP_DIR
-		exit 0
 	fi
 fi
 
 echo "PROJECT_PATH2 is undefined"
 
-exit 1
+exit 0
 
 
