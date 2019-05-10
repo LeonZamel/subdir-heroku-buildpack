@@ -26,10 +26,8 @@ if [ -f $ENV_DIR/PROJECT_PATH ]; then
 	fi
 fi
 
-echo "PROJECT_PATH is undefined"
-
 if [ -f $ENV_DIR/PROJECT_PATH2 ]; then
-	PROJECT_PATH2=`cat $ENV_DIR/PROJECT_PATH`
+	PROJECT_PATH2=`cat $ENV_DIR/PROJECT_PATH2`
 	if [ -d $BUILD_DIR/$PROJECT_PATH2 ]; then
 		echo "-----> Subdir buildpack in $PROJECT_PATH2"
 		echo "       creating cache: $CACHE_DIR"
@@ -48,8 +46,6 @@ if [ -f $ENV_DIR/PROJECT_PATH2 ]; then
 		rm -rf $TMP_DIR
 	fi
 fi
-
-echo "PROJECT_PATH2 is undefined"
 
 exit 0
 
